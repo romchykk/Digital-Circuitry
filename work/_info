@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.1\modelsim_ase\win32aloem
+vEx2_OR
+Z1 !s100 ]`7fEIdlfPE`=V1IcCTcN1
+Z2 I@RU[7;UI0iL:=keZ]zz<h0
+Z3 VYfliPh^TfB6O=FTZ0CUe30
+Z4 dC:\Users\111\Desktop\Lab4_Mykhats
+Z5 w1772014316
+Z6 8C:/Users/111/Desktop/Lab4_Mykhats/Ex2_Mykhats_OR.v
+Z7 FC:/Users/111/Desktop/Lab4_Mykhats/Ex2_Mykhats_OR.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/111/Desktop/Lab4_Mykhats/Ex2_Mykhats_OR.v|
+Z10 o-work work -O0
+Z11 n@ex2_@o@r
+!i10b 1
+!s85 0
+Z12 !s108 1772016096.633000
+Z13 !s107 C:/Users/111/Desktop/Lab4_Mykhats/Ex2_Mykhats_OR.v|
+!s101 -O0
+vLab4_Variant
+!i10b 1
+!s100 Y^Chdf=igF99kzDM^oUnV3
+I5=R4V5G3^7NQJ?E0[aPCK2
+VDCY;7?^5;>9k2?8aB:S`F3
+R4
+w1772015977
+8Lab4_Variant.v
+FLab4_Variant.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1772016168.039000
+!s107 Lab4_Variant.v|
+!s90 -reportprogress|300|Lab4_Variant.v|
+!s101 -O0
+o-O0
+n@lab4_@variant
