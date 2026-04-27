@@ -1,0 +1,15 @@
+module ref(Ain, Bin, Ci, Sout, Cout);
+  
+  input [6:0] Ain, Bin;
+  input Ci;
+  output [6:0] Sout;
+  output Cout;
+  reg [7:0] S;
+  
+  always @ (Ain or Bin or Ci)
+    S = Ain + Bin + Ci;
+  
+  assign Sout = S[6:0];
+  assign Cout = S[7];
+  
+endmodule

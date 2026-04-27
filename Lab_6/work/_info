@@ -1,0 +1,82 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Quartus_Lab\Lab_5
+vbitsum
+Z1 !s100 z6L@mYc`4SNFIXJISU4M:3
+Z2 INhN0EPi][=YV9N86VD;b?0
+Z3 Vi9NGmz9LhHK1Bn8hXVK7o2
+Z4 dC:\Users\111\Desktop\Lab_6
+Z5 w1772117775
+Z6 8C:/Users/111/Desktop/Lab_6/Sum.v
+Z7 FC:/Users/111/Desktop/Lab_6/Sum.v
+L0 21
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s108 1777294630.016000
+Z10 !s107 C:/Users/111/Desktop/Lab_6/Sum.v|
+Z11 !s90 -reportprogress|300|-work|work|C:/Users/111/Desktop/Lab_6/Sum.v|
+Z12 o-work work -O0
+!i10b 1
+!s85 0
+!s101 -O0
+vref
+Z13 !s100 :Qkk5lV>d;BQF0IjdnhXf3
+Z14 IfSX_D0GFFMh:FG<SOKEb`1
+Z15 VbLFWJIh;8kL:M0aP>^?ho0
+R4
+Z16 w1772118204
+Z17 8C:/Users/111/Desktop/Lab_6/ref.v
+Z18 FC:/Users/111/Desktop/Lab_6/ref.v
+L0 1
+R8
+r1
+31
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/111/Desktop/Lab_6/ref.v|
+R12
+Z20 !s108 1777294629.917000
+Z21 !s107 C:/Users/111/Desktop/Lab_6/ref.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vSum
+Z22 !s100 Vhz`EQfPOE<a_4XIGOdWY0
+Z23 Ii:^1>3Y4PfHBgY?B?5CYm2
+Z24 VYT2LX8YSF;k^>VY^09P@:0
+R4
+R5
+R6
+R7
+L0 1
+R8
+r1
+31
+R9
+R10
+R11
+R12
+n@sum
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbench
+!i10b 1
+Z25 !s100 Cd1z:EGJKb5Ef^O@DOSzc1
+Z26 IAkKR?@F:9f3meUYPf3fTg0
+Z27 VhGfW:390DM[oDMzegDH9`2
+R4
+Z28 w1772121084
+Z29 8C:/Users/111/Desktop/Lab_6/testbench.v
+Z30 FC:/Users/111/Desktop/Lab_6/testbench.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1777294630.090000
+!s107 C:/Users/111/Desktop/Lab_6/testbench.v|
+Z31 !s90 -reportprogress|300|-work|work|C:/Users/111/Desktop/Lab_6/testbench.v|
+!s101 -O0
+R12
