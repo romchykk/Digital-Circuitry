@@ -1,0 +1,15 @@
+C:/Users/111/Desktop/dkr1/tb_alb.v {1 {vlog -work work C:/Users/111/Desktop/dkr1/tb_alb.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module tb_alb
+
+Top level modules:
+	tb_alb
+
+} {} {}} C:/Users/111/Desktop/dkr1/alb_top.v {1 {vlog -work work C:/Users/111/Desktop/dkr1/alb_top.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module alb_top
+
+Top level modules:
+	alb_top
+
+} {} {}}

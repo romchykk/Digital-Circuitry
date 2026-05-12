@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.1\modelsim_ase\win32aloem
+valb_top
+Z1 !s100 _LZRb9]UdT3=ZlkkYz4Q93
+Z2 I_8S5@DPZcZFdnGFh15bWR2
+Z3 V<RTPdDdXMPi3>2o>h<Q1;0
+Z4 dC:\Users\111\Desktop\dkr1
+Z5 w1778241293
+Z6 8C:/Users/111/Desktop/dkr1/alb_top.v
+Z7 FC:/Users/111/Desktop/dkr1/alb_top.v
+L0 3
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/111/Desktop/dkr1/alb_top.v|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1778241616.963000
+Z12 !s107 C:/Users/111/Desktop/dkr1/alb_top.v|
+!s101 -O0
+vtb_alb
+!i10b 1
+Z13 !s100 N9YHL2L>dzGXamMDXlmOO1
+Z14 I:]0ZEh==gF_iAhhNeSzGl2
+Z15 VfjfC:FmE2IIZ=0RX>REIh3
+R4
+Z16 w1778241610
+Z17 8C:/Users/111/Desktop/dkr1/tb_alb.v
+Z18 FC:/Users/111/Desktop/dkr1/tb_alb.v
+L0 3
+R8
+r1
+!s85 0
+31
+!s108 1778241617.062000
+!s107 C:/Users/111/Desktop/dkr1/tb_alb.v|
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/111/Desktop/dkr1/tb_alb.v|
+!s101 -O0
+R10

@@ -1,0 +1,126 @@
+`timescale 1ns / 1ps
+
+module tb_alb;
+
+    parameter W = 10;
+
+    reg clk;
+    reg reset;
+    reg [W-1:0] tb_A;
+    reg [W-1:0] tb_B;
+    reg tb_CI;
+    reg [1:0] tb_MI;
+
+    wire [W-1:0] resout;
+    wire co_out, vo_out, no_out, zo_out;
+
+    reg [W-1:0] resoutr;
+    reg [W-1:0] ref_A, ref_B;
+    reg ref_CI;
+    reg [1:0] ref_MI;
+
+    // ????????? ?????? ??? ?????????? ????????????? ???????
+    reg [W-1:0] f_ref;
+    reg vo_ref;
+    reg [W:0] temp_ref;
+
+    alb_top #(W) uut (
+        .clk(clk),
+        .reset(reset),
+        .A_ALB(tb_A),
+        .B_ALB(tb_B),
+        .CI(tb_CI),
+        .ALB_MI(tb_MI),
+        .F_ALB(resout),
+        .CO(co_out),
+        .VO(vo_out),
+        .NO(no_out),
+        .ZO(zo_out)
+    );
+
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk;
+    end
+
+    // ?????????? ?????? ?????? ? ??????????? ????????????
+    always @(posedge clk) begin
+        ref_A <= tb_A;
+        ref_B <= tb_B;
+        ref_CI <= tb_CI;
+        ref_MI <= tb_MI;
+        
+        f_ref = 0;
+        vo_ref = 0;
+        temp_ref = 0;
+
+        case(ref_MI)
+            2'b00: begin // OR
+                f_ref = ref_A | ref_B;
+            end
+            2'b01: begin // ADD
+                temp_ref = ref_A + ref_B + ref_CI;
+                f_ref = temp_ref[W-1:0];
+                vo_ref = (ref_A[W-1] == ref_B[W-1]) && (f_ref[W-1] != ref_A[W-1]);
+            end
+            2'b10: begin // SUB
+                temp_ref = ref_B - ref_A - 1 + ref_CI;
+                f_ref = temp_ref[W-1:0];
+                vo_ref = (ref_B[W-1] != ref_A[W-1]) && (f_ref[W-1] != ref_B[W-1]);
+            end
+            2'b11: begin // XNOR (??????? XOR)
+                f_ref = ~(ref_A ^ ref_B);
+            end
+        endcase
+
+        if (vo_ref) begin
+            resoutr <= {~f_ref[W-1], f_ref[W-1:1]};
+        end else begin
+            resoutr <= f_ref;
+        end
+    end
+
+    // Checker: ????????? ???? ??????????? ??? ?? ???????
+    always @(negedge clk) begin
+        if (!reset && (resout !== resoutr) && ($time > 20)) begin
+            $display("ERROR at time %0t: MI=%b | Expected: %b, Got: %b", $time, tb_MI, resoutr, resout);
+        end
+    end
+
+    initial begin
+        reset = 1;
+        tb_A = 0; tb_B = 0; tb_CI = 0; tb_MI = 0;
+        #15 reset = 0;
+
+        $display("=== Simulation Started: Variant 4423 (With Normalization) ===");
+
+        // ???? 1: MI=00 (OR)
+        tb_A = 10'b1010101010; 
+        tb_B = 10'b0101010101; 
+        tb_MI = 2'b00; 
+        #10;
+        
+        // ???? 2: MI=01 (ADD ? ????????????? ??? ????????? ?????)
+        tb_A = 10'b0110000000; 
+        tb_B = 10'b0110000000; 
+        tb_MI = 2'b01; 
+        #10;
+
+        // ???? 3: MI=10 (SUB: S - R - 1 + CI)
+        tb_A = 10'b0000000001; 
+        tb_B = 10'b0000000101; 
+        tb_CI = 1; 
+        tb_MI = 2'b10; 
+        #10;
+
+        // ???? 4: MI=11 (XNOR - ???????????????)
+        tb_A = 10'b1111000011; 
+        tb_B = 10'b1010101010; 
+        tb_MI = 2'b11; 
+        #30;
+
+        $display("=== Simulation Finished ===");
+        $stop;
+    end
+
+endmodule
